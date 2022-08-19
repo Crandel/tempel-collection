@@ -1,9 +1,9 @@
 go-mode
 
-(pr "fmt.Printf(\"%#v\\n\", " q ")")
+(pr "fmt.Printf(\"" p "\\n\\n%#v\\n\", " q ")")
 (pl "fmt.Println(" q ")")
 
-(db "Debug.Printf(\"%#v\\n\", " q ")")
+(db "Debug.Printf(\"" p "\\n\\n\\n%#v\\n\", " q ")")
 (dl "Debug.Println(" q ")")
 
 (lf "log.Printf(\"%#v\\n\", " q ")")
