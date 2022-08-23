@@ -42,6 +42,8 @@ go-mode
 
 (range "for " p ", " p " := range " p " {" n> q n> "}")
 
+(fnc "func " p "(" p ") {" n> q n> "}")
+
 (main "func main() {" n> q n> "}")
 
 (init "func init() {" n> q n> "}")
