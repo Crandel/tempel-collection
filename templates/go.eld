@@ -3,13 +3,13 @@ go-mode
 (imp "import " q)
 (impn "import (" n> q n ")")
 
-(pr "fmt.Printf(\"" p "\\n\\n%#v\\n\", " q ")")
+(pr "fmt.Printf(\"\\n" p "\\n%#v\\n\", " q ")")
 (pl "fmt.Println(" q ")")
 
-(db "Debug.Printf(\"" p "\\n\\n\\n%#v\\n\", " q ")")
+(db "Debug.Printf(\"\\n" p "\\n\\n%#v\\n\", " q ")")
 (dl "Debug.Println(" q ")")
 
-(lf "log.Printf(\"%#v\\n\", " q ")")
+(lf "log.Printf(\"\\n%#v\\n\", " q ")")
 (ln "log.Println(" q ")")
 
 (str "type " p " struct {" n> q n> "}")
