@@ -35,6 +35,5 @@ jobs:
         version: ${{ matrix.emacs_version }}
     - uses: ./
       with:
-        file: *.eld
         check: ${{ matrix.check }}
         ignore_warnings: ${{ matrix.ignore_warnings }}
