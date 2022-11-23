@@ -26,6 +26,7 @@
 ;;; Commentary:
 ;; This package adds support for templates using tempel.  It will add templates from
 ;; template directory to tempel-path.
+;; Based on mpenet/tempel-closure project autored by Max Penet <mpenetr@s-exp.com>
 
 ;;; Code:
 (defconst tempel-collections-templates-dir
