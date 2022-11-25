@@ -3,7 +3,7 @@
 ;; Copyright (C) 2022 Vitalii Drevenchuk
 
 ;; Author: Vitalii Drevenchuk <cradlemann@gmail.com>
-;; Keywords: tempel
+;; Keywords: tools
 ;; Version: 1.0.0
 ;; Package-Requires: ((tempel "20221016.1017"))
 ;; Homepage: https://github.com/Crandel/tempel-collections
