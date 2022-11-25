@@ -9,7 +9,7 @@ Template files are placed to directory `templates` as lisp data `<mode>.eld` fil
 ## Clone the repository to the directory you want
 
 ```
-git clone https://github.com/Crandel/tempel-collections.git
+git clone https://github.com/Crandel/tempel-collection.git
 ```
 
 ## Setup **tempel-path**
