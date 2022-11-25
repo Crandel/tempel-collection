@@ -1,4 +1,4 @@
-;;; tempel-collections.el --- Collection templates for tempel
+;;; tempel-collection.el --- Collection templates for tempel
 
 ;; Copyright (C) 2022 Vitalii Drevenchuk
 
@@ -6,7 +6,7 @@
 ;; Keywords: tools
 ;; Version: 1.0.0
 ;; Package-Requires: ((tempel "20221016.1017"))
-;; Homepage: https://github.com/Crandel/tempel-collections
+;; Homepage: https://github.com/Crandel/tempel-collection
 
 ;;; License:
 
@@ -24,13 +24,13 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;; This package adds support for templates using tempel.  It will add templates from
+;; This package adds support for templates using tempel. It will add templates from
 ;; template directory to tempel-path.
 ;; Based on https://github.com/mpenet/tempel-clojure authored by Max Penet mpenet@s-exp.com
 
 
 ;;; Code:
-(defconst tempel-collections-templates-dir
+(defconst tempel-collection-templates-dir
   (file-name-directory
    (cond
     (load-in-progress load-file-name)
@@ -39,10 +39,10 @@
     (:else (buffer-file-name)))))
 
 ;;;###autoload
-(defun tempel-collections-initialize ()
-  "Add tempel-collections template dir to \"tempel-path\"."
+(defun tempel-collection-initialize ()
+  "Add tempel-collection template dir to \"tempel-path\"."
   (let ((template-dir (expand-file-name "templates/*.eld"
-                                        tempel-collections-templates-dir)))
+                                        tempel-collection-templates-dir)))
     (when (boundp 'tempel-path)
       (cond
        ((stringp tempel-path)
@@ -51,11 +51,8 @@
         (add-to-list 'tempel-path template-dir t))))))
 
 
-;;;###autoload
-(eval-after-load 'tempel
-  '(tempel-collections-initialize))
-
 (require 'tempel)
+(tempel-collection-initialize)
 
-(provide 'tempel-collections)
-;;; tempel-collections.el ends here
+(provide 'tempel-collection)
+;;; tempel-collection.el ends here
