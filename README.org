@@ -1,0 +1,16 @@
+Collection of the templates to Emacs [[https://github.com/minad/tempel][Tempel]] package.
+
+* About this collection
+
+Template files are placed in the directory =templates= as lisp data =<mode>.eld=
+files.
+
+* Installation
+
+Currently the package must be installed manually, but it should be available
+soon on MELPA.
+
+* Usage
+
+Just use type the key part and call =tempel-expand= or =tempel-insert= in one of the
+supported modes.
