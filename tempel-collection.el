@@ -5,7 +5,7 @@
 ;; Author: Vitalii Drevenchuk <cradlemann@gmail.com>
 ;; Keywords: tools
 ;; Version: 1.0.0
-;; Package-Requires: ((tempel "20221016.1017"))
+;; Package-Requires: ((tempel "0.5"))
 ;; Homepage: https://github.com/Crandel/tempel-collection
 
 ;;; License:
