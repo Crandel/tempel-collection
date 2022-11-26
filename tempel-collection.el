@@ -13,8 +13,6 @@
 ;; Package-Requires: ((tempel "0.5") (emacs "27.1"))
 ;; Homepage: https://github.com/Crandel/tempel-collection
 
-;;; License:
-
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
