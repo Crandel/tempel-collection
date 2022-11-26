@@ -5,7 +5,7 @@
 ;; Author: Vitalii Drevenchuk <cradlemann@gmail.com>
 ;; Keywords: tools
 ;; Version: 1.0.0
-;; Package-Requires: ((tempel "0.5"))
+;; Package-Requires: ((tempel "0.5") (emacs "27.1"))
 ;; Homepage: https://github.com/Crandel/tempel-collection
 
 ;;; License:
@@ -24,35 +24,51 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;; This package adds support for templates using tempel. It will add templates from
-;; template directory to tempel-path.
-;; Based on https://github.com/mpenet/tempel-clojure authored by Max Penet mpenet@s-exp.com
 
+;; This package registers a collection of templates with Tempel.
 
 ;;; Code:
-(defconst tempel-collection-templates-dir
-  (file-name-directory
-   (cond
-    (load-in-progress load-file-name)
-    ((and (boundp 'byte-compile-current-file) byte-compile-current-file)
-     byte-compile-current-file)
-    (:else (buffer-file-name)))))
-
-;;;###autoload
-(defun tempel-collection-initialize ()
-  "Add tempel-collection template dir to \"tempel-path\"."
-  (let ((template-dir (expand-file-name "templates/*.eld"
-                                        tempel-collection-templates-dir)))
-    (when (boundp 'tempel-path)
-      (cond
-       ((stringp tempel-path)
-        (setq tempel-path (list tempel-path template-dir)))
-       ((listp tempel-path)
-        (add-to-list 'tempel-path template-dir t))))))
-
 
 (require 'tempel)
-(tempel-collection-initialize)
+(eval-when-compile
+  (require 'cl-lib)
+  (require 'subr-x))
+
+(defconst tempel-collection--dir
+  (expand-file-name
+   "templates/"
+   (file-name-directory
+    (cond
+     (load-in-progress load-file-name)
+     ((and (boundp 'byte-compile-current-file) byte-compile-current-file)
+      byte-compile-current-file)
+     (:else (buffer-file-name))))))
+
+(defvar tempel-collection--templates nil)
+(defvar tempel-collection--loaded nil)
+
+;;;###autoload
+(defun tempel-collection ()
+  "Template loader."
+  (let ((mode major-mode))
+    (while (and mode (not (memq mode tempel-collection--loaded)))
+      (push mode tempel-collection--loaded)
+      (let ((file (format "%s%s.eld"
+                          tempel-collection--dir
+                          (string-remove-suffix "-mode" (symbol-name mode)))))
+        (when (file-exists-p file)
+          (setq tempel-collection--templates
+                (nconc (tempel--file-read file)
+                       tempel-collection--templates))))
+      (setq mode (get mode 'derived-mode-parent))))
+    ;; TODO code duplication with tempel-path-templates
+    (cl-loop for (modes plist . templates) in tempel-collection--templates
+             if (tempel--condition-p modes plist)
+             append templates))
+
+;;;###autoload
+(with-eval-after-load 'tempel
+  (add-to-list 'tempel-template-sources 'tempel-collection 'append))
 
 (provide 'tempel-collection)
 ;;; tempel-collection.el ends here
