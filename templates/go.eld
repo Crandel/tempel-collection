@@ -16,31 +16,31 @@ go-mode
 
 (inf "type " p " interface {" n> q n "}")
 
-(cnt "const" p " = " q )
+(cnt "const " p " = " q )
 
-(const "const(" n> p " = " q n ")")
+(const "const (" n> p " = " q n ")")
 
 (var "var " p " " q)
 
 (map "map[" p "]" q)
 
-(if "if " p " {" n> q n "}")
+(if "if " p " {" n> q n> "}")
 
-(else "if " p " {" n> p n "} else {" n> q n "}")
+(else "if " p " {" n> p n> "} else {" n> q n> "}")
 
-(elif "if " p " {" n> p n "} else if " p " {" n> q n "}")
+(elif "if " p " {" n> p n> "} else if " p " {" n> q n> "}")
 
-(ifen "if err != nil {" n> q n "}")
+(ifen "if err != nil {" n> q n> "}")
 
-(ifer "if err != " p " {" n> q n "}")
+(ifer "if err != " p " {" n> q n> "}")
 
-(sel "select {" n> "case " p ":" n> q n "}")
+(sel "select {" n> "case " p ":" n> q n> "}")
 
-(swch "switch " p " {" n> "case " p ":" q n "}")
+(swch "switch " p " {" n> "case " p ":" q n> "}")
 
-(for "for " p "{" n> q n "}")
+(for "for " p "{" n> q n> "}")
 
-(range "for " p ", " p " := range " p " {" n> q n "}")
+(range "for " p ", " p " := range " p " {" n> q n> "}")
 
 (fnc "func " p "(" p ") {" n> q n "}")
 
