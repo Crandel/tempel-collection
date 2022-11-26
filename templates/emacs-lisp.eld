@@ -1,7 +1,3 @@
-lisp-mode emacs-lisp-mode ;; Specify multiple modes
-
-(lambda "(lambda (" p ")" n> r> ")")
-
 emacs-lisp-mode
 
 (autoload ";;;###autoload")
