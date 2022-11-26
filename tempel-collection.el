@@ -60,7 +60,9 @@
           (setq tempel-collection--templates
                 (nconc (tempel--file-read file)
                        tempel-collection--templates))))
-      (setq mode (get mode 'derived-mode-parent))))
+      (setq mode (and (not (eq mode #'fundamental-mode))
+                      (or (get mode 'derived-mode-parent)
+                          #'fundamental-mode)))))
     ;; TODO code duplication with tempel-path-templates
     (cl-loop for (modes plist . templates) in tempel-collection--templates
              if (tempel--condition-p modes plist)
