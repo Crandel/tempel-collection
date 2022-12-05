@@ -7,8 +7,35 @@ files.
 
 * Installation
 
-Currently the package must be installed manually, but it should be available
-soon on MELPA.
+** From melpa
+
+You can install this package from melpa, by first ensuring that you have the melpa source in your package-archives.
+
+#+begin_src elisp
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
+(package-refresh-contents)
+#+end_src
+
+
+Once that is done, this package can be installed.
+
+#+begin_src shell
+package-install tempel-collection
+#+end_src
+
+** use-package recipe
+
+#+begin_src elisp
+(use-package tempel-collection
+  :ensure t
+  :after tempel
+)
+#+end_src
+
+Now all the templates will load automatically.
 
 * Usage
 
