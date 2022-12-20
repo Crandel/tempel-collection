@@ -24,11 +24,11 @@ go-mode
 
 (map "map[" p "]" q)
 
-(if "if " p " {" n> q n> "}")
+(if "if " p " {" n> p n> "}" q)
 
-(else "if " p " {" n> p n> "} else {" n> q n> "}")
+(else "if " p " {" n> p n> "} else {" n> p n> "}" q)
 
-(elif "if " p " {" n> p n> "} else if " p " {" n> q n> "}")
+(elif "if " p " {" n> p n> "} else if " p " {" n> p n> "}" q)
 
 (ifen "if err != nil {" n> q n> "}")
 
