@@ -9,7 +9,7 @@
 ;;             Max Penet <mpenetr@s-exp.com>,
 ;;             Daniel Mendler <mail@daniel-mendler.de>
 ;; Keywords: tools
-;; Version: 0.1
+;; Version: 0.2
 ;; Package-Requires: ((tempel "0.5") (emacs "27.1"))
 ;; Homepage: https://github.com/Crandel/tempel-collection
 
