@@ -6,6 +6,6 @@ sh-mode
 
 (ife "if [ " p " ]" n "  then " p n "else" p n "fi" q)
 
-(case "case " p " in" n> p " )" n> p n> ";;" n> q n "esac)")
+(cs "case " p " in" n> p " )" n> p n> ";;" n> q n "esac)")
 
-(for "for " p " in " p n "do" n> q n "done")
+(fr "for " p " in " p n "do" n> q n "done")

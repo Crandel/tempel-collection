@@ -18,15 +18,15 @@ go-mode
 
 (cnt "const " p " = " q )
 
-(const "const (" n> p " = " q n ")")
+(cnst "const (" n> p " = " q n ")")
 
-(var "var " p " " q)
+(vr "var " p " " q)
 
-(map "map[" p "]" q)
+(mp "map[" p "]" q)
 
 (if "if " p " {" n> p n> "}" q)
 
-(else "if " p " {" n> p n> "} else {" n> p n> "}" q)
+(el "if " p " {" n> p n> "} else {" n> p n> "}" q)
 
 (elif "if " p " {" n> p n> "} else if " p " {" n> p n> "}" q)
 
@@ -38,14 +38,14 @@ go-mode
 
 (swch "switch " p " {" n> "case " p ":" q n> "}")
 
-(for "for " p "{" n> q n> "}")
+(fr "for " p "{" n> q n> "}")
 
-(range "for " p ", " p " := range " p " {" n> q n> "}")
+(rng "for " p ", " p " := range " p " {" n> q n> "}")
 
 (fnc "func " p "(" p ") {" n> q n "}")
 
-(main "func main() {" n> q n "}")
+(mn "func main() {" n> q n "}")
 
-(init "func init() {" n> q n "}")
+(in "func init() {" n> q n "}")
 
-(test "func Test" p " (t *testing.T) { " n> q n "}")
+(tst "func Test" p " (t *testing.T) { " n> q n "}")

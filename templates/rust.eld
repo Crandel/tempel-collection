@@ -2,7 +2,7 @@ rust-mode
 
 (if "if " p " {" n> q n> "}" q)
 
-(else "if " p " {" n> p n> "} else {" n> p n> "}" q)
+(el "if " p " {" n> p n> "} else {" n> p n> "}" q)
 
 (elif "if " p " {" n> p n> "} else if " p " {" n> p n> "}" q)
 
