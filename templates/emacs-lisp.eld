@@ -2,7 +2,6 @@ emacs-lisp-mode
 
 (autoload ";;;###autoload")
 (pt "(point)")
-(lambda "(lambda (" p ")" n> r> ")")
 (var "(defvar " p "\n  \"" p "\")")
 (local "(defvar-local " p "\n  \"" p "\")")
 (const "(defconst " p "\n  \"" p "\")")
