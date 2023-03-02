@@ -1,4 +1,4 @@
-go-mode
+go-mode go-ts-mode
 
 (imp "import " q)
 (impn "import (" n> q n ")")

@@ -50,16 +50,46 @@
 (defvar tempel-collection--templates nil)
 (defvar tempel-collection--loaded nil)
 
+;; Maps directly to mode names as stored in <mode-name>.eld file, as
+;; some ts modes do not have a counterpart non-ts mode in Emacs core,
+;; e.g., rust-mode. Do not alias ts modes which have a common parent
+;; mode with their non-ts mode. For example, python-ts-mode and
+;; python-mode have a common parent, python-base-mode. Thus add python
+;; templates to python-base.eld. Note that in the lisp data template file,
+;; the alias mode must be enabled, too.
+(defvar tempel-collection--aliases
+  '((c++-ts-mode . "c++")
+    (c-ts-mode . "c")
+    (cmake-ts-mode . "cmake")
+    (csharp-ts-mode . "csharp")
+    (dockerfile-ts-mode . "dockerfile")
+    (go-ts-mode . "go")
+    (go-mod-ts-mode . "go-mod")
+    (java-ts-mode . "java")
+    (js-ts-mode . "js")
+    (json-ts-mode . "json")
+    (rust-ts-mode . "rust")
+    (toml-ts-mode . "toml")
+    (typescript-ts-base-mode . "typescript")
+    (yaml-ts-mode . "yaml")))
+
+(defun tempel-collection--mode-file (mode-name)
+  "Get the file name for the templates of MODE-NAME, if it exists."
+  (let ((file (format "%s%s.eld" tempel-collection--dir mode-name)))
+    (if (file-exists-p file)
+        file
+      nil)))
+
 ;;;###autoload
 (defun tempel-collection ()
   "Template loader."
   (let ((mode major-mode))
     (while (and mode (not (memq mode tempel-collection--loaded)))
       (push mode tempel-collection--loaded)
-      (let ((file (format "%s%s.eld"
-                          tempel-collection--dir
-                          (string-remove-suffix "-mode" (symbol-name mode)))))
-        (when (file-exists-p file)
+      (let ((file
+             (or (tempel-collection--mode-file (string-remove-suffix "-mode" (symbol-name mode)))
+                 (tempel-collection--mode-file (alist-get mode tempel-collection--aliases)))))
+        (when file
           (setq tempel-collection--templates
                 (nconc (tempel--file-read file)
                        tempel-collection--templates))))

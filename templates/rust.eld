@@ -1,4 +1,4 @@
-rust-mode
+rust-mode rust-ts-mode
 
 (if "if " p " {" n> q n> "}" q)
 
