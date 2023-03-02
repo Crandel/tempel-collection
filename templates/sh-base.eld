@@ -1,4 +1,4 @@
-sh-mode
+sh-base-mode
 
 (! "#!/usr/bin/env bash" n q)
 
