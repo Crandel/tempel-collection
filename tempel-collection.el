@@ -96,10 +96,10 @@
       (setq mode (and (not (eq mode #'fundamental-mode))
                       (or (get mode 'derived-mode-parent)
                           #'fundamental-mode)))))
-    ;; TODO code duplication with tempel-path-templates
-    (cl-loop for (modes plist . templates) in tempel-collection--templates
-             if (tempel--condition-p modes plist)
-             append templates))
+  ;; TODO code duplication with tempel-path-templates
+  (cl-loop for (modes plist . templates) in tempel-collection--templates
+           if (tempel--condition-p modes plist)
+           append templates))
 
 ;;;###autoload
 (with-eval-after-load 'tempel
