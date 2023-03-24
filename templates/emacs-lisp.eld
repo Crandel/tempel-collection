@@ -29,5 +29,5 @@ emacs-lisp-mode
         "(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
 (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name))) " ends here" n)
-(log "(message \"LOG %s %S: " (s sexp)
+(log "(message \"LOG %s " (s sexp) ": %S"
      "\" (format-time-string \"%X\") " sexp ")")
