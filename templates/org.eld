@@ -28,3 +28,4 @@ org-mode
 (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
 (inlsrc "src_" p "{" q "}")
 (title "#+title: " p n "#+author: " p n "#+language: " p n n)
+(readonly ":tangle yes :tangle-mode (identity #o444) :mkdirp yes" n)
