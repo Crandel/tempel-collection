@@ -1,6 +1,6 @@
 python-base-mode
 
 (for "for " p " in " p ":" n> q)
-(pu "import pudb; pu.db" q)
+(tr "import " p "; " p ".set_trace()" q)
 (ig "# type: ignore" q)
 
