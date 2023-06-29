@@ -11,3 +11,5 @@ rust-mode rust-ts-mode
 (fnr "fn " p "(" p ") -> " p " {" n> p n "}" q)
 
 (crt "extern crate " q ";")
+
+(drv "#[derive(" p ")]" q)
