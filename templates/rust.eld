@@ -13,3 +13,5 @@ rust-mode rust-ts-mode
 (crt "extern crate " q ";")
 
 (drv "#[derive(" p ")]" q)
+
+(d "dbg!(" p ")" q)
