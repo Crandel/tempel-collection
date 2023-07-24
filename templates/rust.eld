@@ -15,3 +15,5 @@ rust-mode rust-ts-mode
 (drv "#[derive(" p ")]" q)
 
 (d "dbg!(" p ")" q)
+
+(lp "loop {" n> q n> "}" q)
