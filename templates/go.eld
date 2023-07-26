@@ -12,7 +12,7 @@ go-mode go-ts-mode
 (lf "log.Printf(\"\\n%#v\\n\", " q ")")
 (ln "log.Println(" q ")")
 
-(str "type " p " struct {" n> q n "}")
+(stt "type " p " struct {" n> q n "}")
 
 (inf "type " p " interface {" n> q n "}")
 
