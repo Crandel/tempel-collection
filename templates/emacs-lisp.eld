@@ -1,6 +1,6 @@
 emacs-lisp-mode
 
-(autoload ";;;###autoload")
+(autoload & ";;;###autoload")
 (pt "(point)")
 (var "(defvar " p "\n  \"" p "\")")
 (local "(defvar-local " p "\n  \"" p "\")")
