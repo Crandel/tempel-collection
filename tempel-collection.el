@@ -10,7 +10,7 @@
 ;;             Daniel Mendler <mail@daniel-mendler.de>
 ;; Keywords: tools
 ;; Version: 0.2
-;; Package-Requires: ((tempel "0.5") (emacs "27.1"))
+;; Package-Requires: ((tempel "0.5") (emacs "29.1"))
 ;; Homepage: https://github.com/Crandel/tempel-collection
 
 ;; This program is free software; you can redistribute it and/or modify
