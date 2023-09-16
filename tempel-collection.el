@@ -10,7 +10,7 @@
 ;;             Daniel Mendler <mail@daniel-mendler.de>
 ;; Keywords: tools
 ;; Version: 0.2
-;; Package-Requires: ((tempel "0.5") (emacs "27.1"))
+;; Package-Requires: ((tempel "0.5") (emacs "29.1"))
 ;; Homepage: https://github.com/Crandel/tempel-collection
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -57,7 +57,6 @@
 ;; python-mode have a common parent, python-base-mode. Thus add python
 ;; templates to python-base.eld. Note that in the lisp data template file,
 ;; the alias mode must be enabled, too.
-(if (version<= "29.1" emacs-version)
 (defvar tempel-collection--aliases
   '((c++-ts-mode . "c++")
     (c-ts-mode . "c")
@@ -72,7 +71,7 @@
     (rust-ts-mode . "rust")
     (toml-ts-mode . "toml")
     (typescript-ts-base-mode . "typescript")
-    (yaml-ts-mode . "yaml"))))
+    (yaml-ts-mode . "yaml")))
 
 (defun tempel-collection--mode-file (mode-name)
   "Get the file name for the templates of MODE-NAME, if it exists."
