@@ -1,14 +1,15 @@
 org-mode
 
+
 (ttl & "#+title: " p n "#+author: " p n "#+language: " p n n)
 (qt & "#+begin_quote" n> r> n> "#+end_quote")
 (exmpl & "#+begin_example" n> r> n> "#+end_example")
 (cntr & "#+begin_center" n> r> n> "#+end_center")
 (comm & "#+begin_comment" n> r> n> "#+end_comment")
 (vrs & "#+begin_verse" n> r> n> "#+end_verse")
-(src & "#+begin_src " p n> r> n> "#+end_src" :post (org-edit-src-code))
-(rst & "#+begin_src restclient" p n> r> n> "#+end_src" :post (org-edit-src-code))
-(elsp & "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
+(src & "#+begin_src " p n r n "#+end_src" :post (org-edit-src-code))
+(rst & "#+begin_src restclient" p n r n "#+end_src" :post (org-edit-src-code))
+(elsp & "#+begin_src emacs-lisp" n r n "#+end_src" :post (org-edit-src-code))
 (readonly ":tangle yes :tangle-mode (identity #o444) :mkdirp yes" n)
 (oxhugo & ":PROPERTIES:"  n ":EXPORT_FILE_NAME: " (p "Simple Filename") n ":EXPORT_DATE: " (format-time-string "%Y-%m-%d") n ":EXPORT_HUGO_DRAFT: false" n ":END:")
 (readmecollapse  "*** " (p "Heading") n "#+HTML: <details> <summary> " (p "sub-heading")  " </summary>" n (r> "link or any comments") n n "#+HTML: </details>" n)
@@ -16,7 +17,7 @@ org-mode
 ;; taken from https://github.com/minad/tempel/blob/5b09f612cfd805dba5e90bf06580583cab045499/README.org#template-file-format
 (caption & "#+caption: ")
 (drawer & ":" p ":" n r ":end:")
-(begin & "#+begin_" (s name) n> r> n "#+end_" name)
+(begin & "#+begin_" (s name) n r n "#+end_" name)
 (quote & "#+begin_quote" n> r> n "#+end_quote")
 (sidenote & "#+begin_sidenote" n> r> n "#+end_sidenote")
 (marginnote & "#+begin_marginnote" n> r> n "#+end_marginnote")
@@ -27,7 +28,8 @@ org-mode
 (latex & "#+begin_export latex" n> r> n "#+end_export")
 (comment & "#+begin_comment" n> r> n "#+end_comment")
 (verse & "#+begin_verse" n> r> n "#+end_verse")
-(gnuplot & "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n> r> n "#+end_src" :post (org-edit-src-code))
-(elisp & "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
-(inlsrc & "src_" p "{" q "}")
+(gnuplot & "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n r n "#+end_src" :post (org-edit-src-code))
+(elisp & "#+begin_src emacs-lisp" n r n "#+end_src" :post (org-edit-src-code))
+(inlsrc "src_" p "{" q "}")
 (title & "#+title: " p n "#+author: " p n "#+language: " p n n)
+
