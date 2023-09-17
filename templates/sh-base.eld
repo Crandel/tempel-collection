@@ -1,6 +1,6 @@
 sh-base-mode
 
-(! "#!/usr/bin/env bash" n q)
+(! & "#!/usr/bin/env bash" n q)
 
 (if "if [ " p " ]" n "  then " p n "fi" q)
 
