@@ -1,4 +1,4 @@
-js-mode js2-mode
+js-base-mode
 
 (if "if (" p ") {" n> q n> "}")
 (el "if (" p ") {" n> p n> "} else { " n> q n> "}")
