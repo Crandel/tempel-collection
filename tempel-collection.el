@@ -87,7 +87,7 @@
     (while (and mode (not (memq mode tempel-collection--loaded)))
       (push mode tempel-collection--loaded)
       (let ((file
-             (or (tempel-collection--mode-file (string-remove-suffix "-mode" (symbol-name mode)))
+             (or (tempel-collection--mode-file (downcase (string-remove-suffix "-mode" (symbol-name mode))))
                  (tempel-collection--mode-file (alist-get mode tempel-collection--aliases)))))
         (when file
           (setq tempel-collection--templates
