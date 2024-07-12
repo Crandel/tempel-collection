@@ -39,5 +39,4 @@ Now all the templates will load automatically.
 
 * Usage
 
-Just use type the key part and call =tempel-expand= or =tempel-insert= in one of the
-supported modes.
+Just call =tempel-expand= or =tempel-insert= in one of the supported modes.
