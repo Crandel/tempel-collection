@@ -2,6 +2,8 @@ org-mode
 
 
 (ttl      & "#+title: " p n "#+author: " p n "#+language: " p n n)
+(nm       & "#+name: " p n)
+(lnk      & "[[" p "][" p "]]")
 (bgn      & "#+begin_" (s name) n r n "#+end_" name)
 (exmpl    & "#+begin_example" n> r> n> "#+end_example")
 (cntr     & "#+begin_center" n> r> n> "#+end_center")
