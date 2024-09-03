@@ -19,18 +19,18 @@ org-mode
  :post (org-edit-src-code))
 (gnplt    & "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n r n "#+end_src"
  :post (org-edit-src-code))
-(vrs & "#+begin_verse" n> r> n> "#+end_verse")
-(rdnly ":tangle yes :tangle-mode (identity #o444) :mkdirp yes" n)
-(oxhugo & ":PROPERTIES:"  n ":EXPORT_FILE_NAME: " (p "Simple Filename") n ":EXPORT_DATE: "
- (format-time-string "%Y-%m-%d") n ":EXPORT_HUGO_DRAFT: false" n ":END:")
-(rdmecollapse  "*** " (p "Heading") n "#+HTML: <details> <summary> " (p "sub-heading")  " </summary>" n
- (r> "link or any comments") n n "#+HTML: </details>" n)
 (py_   & "#+begin_src python" n r n "#+end_src"
  :post (org-edit-src-code))
 (py_vl & "#+begin_src python :results value" n r n "#+end_src"
  :post (org-edit-src-code))
 (py_otpt & "#+begin_src python :results output" n r n "#+end_src"
  :post (org-edit-src-code))
+(vrs & "#+begin_verse" n> r> n> "#+end_verse")
+(rdnly ":tangle yes :tangle-mode (identity #o444) :mkdirp yes" n)
+(oxhugo & ":PROPERTIES:"  n ":EXPORT_FILE_NAME: " (p "Simple Filename") n ":EXPORT_DATE: "
+ (format-time-string "%Y-%m-%d") n ":EXPORT_HUGO_DRAFT: false" n ":END:")
+(rdmecollapse  "*** " (p "Heading") n "#+HTML: <details> <summary> " (p "sub-heading")  " </summary>" n
+ (r> "link or any comments") n n "#+HTML: </details>" n)
 
 ;; taken from https://github.com/minad/tempel/blob/5b09f612cfd805dba5e90bf06580583cab045499/README.org#template-file-format
 (cptn & "#+caption: ")
