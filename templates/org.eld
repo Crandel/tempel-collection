@@ -25,11 +25,11 @@ org-mode
  (format-time-string "%Y-%m-%d") n ":EXPORT_HUGO_DRAFT: false" n ":END:")
 (rdmecollapse  "*** " (p "Heading") n "#+HTML: <details> <summary> " (p "sub-heading")  " </summary>" n
  (r> "link or any comments") n n "#+HTML: </details>" n)
-(python   & "#+begin_src python" n r n "#+end_src"
+(py_   & "#+begin_src python" n r n "#+end_src"
  :post (org-edit-src-code))
-(pythonvle & "#+begin_src python :results value" n r n "#+end_src"
+(py_vl & "#+begin_src python :results value" n r n "#+end_src"
  :post (org-edit-src-code))
-(pythonotpt & "#+begin_src python :results output" n r n "#+end_src"
+(py_otpt & "#+begin_src python :results output" n r n "#+end_src"
  :post (org-edit-src-code))
 
 ;; taken from https://github.com/minad/tempel/blob/5b09f612cfd805dba5e90bf06580583cab045499/README.org#template-file-format
