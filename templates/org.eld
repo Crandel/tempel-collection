@@ -19,6 +19,12 @@ org-mode
  :post (org-edit-src-code))
 (gnplt    & "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n r n "#+end_src"
  :post (org-edit-src-code))
+(py_   & "#+begin_src python" n r n "#+end_src"
+ :post (org-edit-src-code))
+(py_vl & "#+begin_src python :results value" n r n "#+end_src"
+ :post (org-edit-src-code))
+(py_otpt & "#+begin_src python :results output" n r n "#+end_src"
+ :post (org-edit-src-code))
 (vrs & "#+begin_verse" n> r> n> "#+end_verse")
 (rdnly ":tangle yes :tangle-mode (identity #o444) :mkdirp yes" n)
 (oxhugo & ":PROPERTIES:"  n ":EXPORT_FILE_NAME: " (p "Simple Filename") n ":EXPORT_DATE: "
