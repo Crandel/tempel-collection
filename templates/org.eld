@@ -7,7 +7,7 @@ org-mode
 (bgn      & "#+begin_" (s name) n r n "#+end_" name)
 (exmpl    & "#+begin_example" n> r> n> "#+end_example")
 (cntr     & "#+begin_center" n> r> n> "#+end_center")
-(comm     & "#+begin_comment" n> r> n> "#+end_comment")
+(cmm     & "#+begin_comment" n> r> n> "#+end_comment")
 (mrginnte & "#+begin_marginnote" n> r> n "#+end_marginnote")
 (qt       & "#+begin_quote" n> r> n> "#+end_quote")
 (sdnt     & "#+begin_sidenote" n> r> n "#+end_sidenote")
