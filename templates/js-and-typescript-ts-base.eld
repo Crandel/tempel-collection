@@ -1,4 +1,4 @@
-js-base-mode
+js-base-mode typescript-ts-base-mode
 
 (if "if (" p ") {" n> q n "}" >)
 (el "if (" p ") {" n> p n "} else { " > n> q n "}" >)
