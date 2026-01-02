@@ -18,6 +18,7 @@ emacs-lisp-mode
 (andlt* "(and-let* (" p ")" n> r> ")")
 (cnd "(cond" n "(" q "))" >)
 (pcase "(pcase " (p "scrutinee") n "(" q "))" >)
+(lmd "(lambda (" p ")" n> r> ")")
 (lt "(let (" p ")" n> r> ")")
 (lt* "(let* (" p ")" n> r> ")")
 (rc "(letrec (" p ")" n> r> ")")
