@@ -66,7 +66,7 @@
     (go-ts-mode . "go")
     (go-mod-ts-mode . "go-mod")
     (java-ts-mode . "java")
-    (js-ts-mode . "js")
+    (js-base-mode . "js")
     (json-ts-mode . "json")
     (rust-ts-mode . "rust")
     (toml-ts-mode . "toml")
