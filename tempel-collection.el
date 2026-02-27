@@ -67,10 +67,10 @@
     (go-mod-ts-mode . "go-mod")
     (java-ts-mode . "java")
     (js-base-mode . "js")
+    (typescript-ts-base-mode . "js")
     (json-ts-mode . "json")
     (rust-ts-mode . "rust")
     (toml-ts-mode . "toml")
-    (typescript-ts-base-mode . "typescript")
     (yaml-ts-mode . "yaml")))
 
 (defun tempel-collection--mode-file (mode-name)
