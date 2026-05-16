@@ -1,7 +1,7 @@
 org-mode
 
 
-(ttl      & "#+title: " p n "#+author: " p n "#+language: " p n n)
+(ttl      & "#+title: " p n "#+author: " p n "#+language: " p n "#+OPTIONS: toc:nil" p n n)
 (nm       & "#+name: " p n)
 (lnk      & "[[" p "][" p "]]")
 (bgn      & "#+begin_" (s name) n r n "#+end_" name)
