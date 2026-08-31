@@ -16,3 +16,9 @@ markdown-mode
 (h3 & "### " p " ###")
 (h4 & "#### " p " ####")
 (inserttable (call-interactively #'markdown-insert-table))
+
+(hrdash "----------" n q)
+(hrstar "*******" n q)
+(h1setext (p "Header 1" title) n (make-string (string-width title) ?=) n q)
+
+(h2setext (p "Header 2" title) n (make-string (string-width title) ?-) n q)
