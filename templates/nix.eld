@@ -23,3 +23,23 @@ nix-mode
             "platforms = platforms." 
             (p (completing-read "Platform: " '("all" "allBut" "arm" "cygwin" "darwin" "freebsd" "gnu" "i686" "illumos" "linux" "mesaPlatforms" "mips" "netbsd" "none" "openbsd" "unix" "x86"))) ";" n> q "};" n> "}"
 )
+
+(mksh "pkgs."
+         (p (completing-read "Shell: " '("mkShell" "mkShellNoCC"))) " {" n>
+         "inputsFrom = [ " (p "inputs") " ];" n>
+         "packages = [ " (p "packages") " ];" n>
+         "shellHook = ''" n> q n "'';" n "}" >)
+(passupd "passthru.updateScript = nix-update-script { };")
+(pkgurl "{ lib, stdenv, fetchurl" (p ", inputs") " }:" n n
+             "stdenv.mkDerivation rec {" n>
+             "pname = \"" (p "name") "\";" n>
+             "version = \"" (p "version") "\";" n n>
+             "src = fetchurl {" n> "url = \"" (p "url") "\";" n>
+             "sha256 = \"${lib.fakeSha256}\";" n "};" > n n>
+             "nativeBuildInputs = [ " (p "native inputs") " ];" n>
+             "buildInputs = [ " (p "inputs") " ];" n n>
+             "meta = with lib; {" n> "homepage = \"" (p "homepage") "\";" n>
+             "description = \"" (p "description") "\";" n>
+             "license = licenses." (p "mit") ";" n>
+             "maintainers = with maintainers; [ " (p "maintainer") " ];" n>
+             "platforms = platforms." (p "all") ";" n "};" > n "};" >)
