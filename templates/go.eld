@@ -49,3 +49,9 @@ go-mode go-ts-mode
 (in "func init() {" n> q n "}")
 
 (tst "func Test" p " (t *testing.T) { " n> q n "}")
+
+(vrblk "var (" n> (p "name") " " q n ")" >)
+
+(mthddoc "// " (p "name" name) " " (p "description") n
+        "func (" (p "recv") ") " (s name) "(" (p "args") ") "
+        (p "result") " {" n> q n "}" >)
