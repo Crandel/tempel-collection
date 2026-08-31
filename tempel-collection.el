@@ -9,8 +9,8 @@
 ;;             Max Penet <mpenetr@s-exp.com>,
 ;;             Daniel Mendler <mail@daniel-mendler.de>
 ;; Keywords: tools
-;; Version: 0.2
-;; Package-Requires: ((tempel "0.5") (emacs "29.1"))
+;; Version: 0.3
+;; Package-Requires: ((tempel "0.5") (emacs "31.1"))
 ;; Homepage: https://github.com/Crandel/tempel-collection
 
 ;; This program is free software; you can redistribute it and/or modify
