@@ -21,3 +21,21 @@ js-base-mode typescript-ts-base-mode
 
 (imp "import {" p "} from \"" q "\";")
 (impas "import {" p " as " p "} from \"" q "\";")
+
+(tr "try {" n> p n "} catch (err) {" > n> q n "}" >)
+(trfin "try {" n> p n "} catch (err) {" > n> p n
+             "} finally {" > n> q n "}" >)
+(ctor "constructor(" (p "args") ") {" n> q n "}" >)
+(cls "class " (p "Class") " {" n>
+       "constructor(" (p "args") ") {" n> q n "}" > n "}" >)
+(clsext "class " (p "Class") " extends " (p "Parent") " {" n>
+               "constructor(" (p "args") ") {" n> "super(" p ");" n>
+               q n "}" > n "}" >)
+(tmout "setTimeout(() => {" n> q n "}, " (p "delayInMs") ")" >)
+(impdflt "import " (p "name") " from '" q "'")
+(impallas "import * as " (p "alias") " from '" q "'")
+
+
+(exp "export { " (p "name") " } from '" q "'")
+(expas "export { " (p "name") " as " (p "alias") " } from '" q "'")
+(bndmthd "this." (p "method" method) " = this." (s method) ".bind(this)")
