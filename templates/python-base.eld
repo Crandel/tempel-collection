@@ -87,4 +87,9 @@ python-base-mode
 (utf-8_encoding "# -*- coding: utf-8 -*-")
 (while "while " p ":" n> q)
 (with "with " p p ":" n> q)
-(with_statement "from __future__ import with_statement"))
+(with_statement "from __future__ import with_statement")
+
+(withopn "with open(" (p "\"filename\"") ", encoding=\"" (p "utf-8")
+           "\", mode=\"" (p "r") "\") as " (p "file") ":" n> q)
+
+(impas "import " (p "lib") " as " (p "alias") n q)
