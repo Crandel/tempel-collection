@@ -23,3 +23,5 @@ nim-mode
 (tmpl "template " (p "name") "(" (p "arguments") "): "
           (p "return type") " =" n> q)
 (wh "while " (p "expression") ":" n> q)
+
+(tr "try:" n> p n "except " (p "Exception") ":" n> q)
