@@ -24,3 +24,6 @@ nxml-mode
 (sty "<style type=\"text/css\" media=\"" (p "screen") "\">" n>
        q n "</style>" >)
 (tgblk "<" (p "tag" tag) ">" n> p n "</" (s tag) ">" q >)
+
+(tg "<" (p "tag" tag) ">" q "</" (s tag) ">")
+(tgself "<" (p "tag") " " q " />")
