@@ -18,3 +18,11 @@ tuareg-mode
 (fnrecur "let rec " (p "fun") " " (p "args") " =" n> q)
 (vl "val " (p "fun") " : " q)
 (wh "while " (p "cond") " do" n> q n "done" >)
+
+(typvariant "type " (p "expr") " =" n> "| " q)
+(typrec "type " (p "name") " = { " (p "field") " : " (p "int")
+             "; " q " }")
+(ifc "if " (p "cond") " then" n> q)
+(ife "if " (p "cond") " then" n> p n "else" > n> q)
+
+(tr "try" n> p n "with" > n> q)
