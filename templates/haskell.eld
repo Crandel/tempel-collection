@@ -12,3 +12,13 @@ haskell-mode
 (cls "class " (p "Name") " where" n> q)
 (prag "{-# " (p "PRAGMA") " #-}")
 (prn "print " q)
+
+(instdecl "instance " (p "Show a => ") (p "Ord") " " (p "DataType")
+          " where" n> q)
+(imp "import " q)
+(impqual "import qualified " (p "Module") " as " q)
+(implst "import " (p "Module") " (" q ")")
+
+(cs "case " (p "value") " of" n>
+      (p "pattern") " -> " (p "result") n>
+      "otherwise -> " q)
