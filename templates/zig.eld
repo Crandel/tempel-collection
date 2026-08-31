@@ -9,3 +9,7 @@ zig-mode
 (swch "switch (" p ") {" n> p " => " q n "}" >)
 (tst "test \"" p "\" {" n> q n "}" >)
 (unn "union " (p "(enum)") " {" n> q n "}" >)
+
+(mn "pub fn main(" (p "args") ") " (p "!void") " {" n> q n "}" >)
+(fr "for (" (p "items") ") |" (p "value") "| {" n> q n "}" >)
+(enm "enum(" (p "type") ") {" n> q n "}" >)
