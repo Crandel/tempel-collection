@@ -28,3 +28,23 @@ latex-mode LaTeX-mode
 (trivlist "\\begin{trivlist}\n" r> n> "\\end{trivlist}")
 (verbatim "\\begin{verbatim}\n" r> n> "\\end{verbatim}")
 (verbatimm "\\begin{verbatim*}\n" r> n> "\\end{verbatim*}")
+
+(thm "\\begin{thm}[" (p "title") "]" n>
+         "\\label{thm:" (p "label") "}" n> q n "\\end{thm}" >)
+(lem "\\begin{lem}[" (p "title") "]" n>
+       "\\label{lem:" (p "label") "}" n> q n "\\end{lem}" >)
+(cor "\\begin{cor}[" (p "title") "]" n>
+           "\\label{cor:" (p "label") "}" n> q n "\\end{cor}" >)
+(cvcomp "\\cvcomputer{" (p "category") "}{" (p "programs") "}{"
+            (p "category") "}{" (p "programs") "}")
+
+(gls "\\newglossaryentry{" (p "AC") "}{name=" (p "Name")
+          ", description=" q "}")
+(newcmdargs "\\newcommand{\\" (p "name") "}[" (p "0") "]{" q "}")
+(gfxopt "\\includegraphics[" (p "options") "]{" q "}")
+(frmopt "\\begin{frame}[" (p "options") "]" n>
+       "\\frametitle{" (p "title") "}" n> q n "\\end{frame}" >)
+
+(newcmd "\\newcommand{\\" (p "name") "}{" q "}")
+(gfx "\\includegraphics{" q "}")
+(frm "\\begin{frame}" n> q n "\\end{frame}" >)
