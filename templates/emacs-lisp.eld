@@ -68,3 +68,24 @@ emacs-lisp-mode
 
                 "(provide '" (s file) ")" n
                 ";;; " (s file) ".el ends here")
+
+(srchfwd "(search-forward \"" (p "string") "\" " (p "nil") " "
+                (p "nil") " " (p "1") ")" q)
+(srchfwdre "(search-forward-regexp \"" (p "regexp") "\" "
+                       (p "nil") " " (p "nil") " " (p "1") ")" q)
+(srchbwd "(search-backward \"" (p "string") "\" " (p "nil") " "
+                 (p "nil") " " (p "1") ")" q)
+(srchbwdre "(search-backward-regexp \"" (p "regexp") "\" "
+                        (p "nil") " " (p "nil") " " (p "1") ")" q)
+(intr "(interactive \"" (p "P") "\")")
+
+
+(hookadd "(add-hook '" (p "mode") "-hook #'" q ")")
+(strmtch "(string-match \"" (p "regexp") "\" \"" (p "string")
+              "\" " (p "0") ")")
+(stmark "(set-mark " q ")")
+(stbuf "(set-buffer " q ")")
+(svbuf "(save-buffer)")
+(dirfile "(directory-files " (p "directory") " " (p "nil") " "
+                 (p "nil") " " (p "nil") ")")
+(delfile "(delete-file " q ")")
