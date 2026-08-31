@@ -16,3 +16,7 @@ cmake-mode cmake-ts-mode
 (opt "option(" (p "OPT") " \"" (p "docstring") "\" " (p "value") ")")
 (proj "project(" q ")")
 (st "set(" (p "var") " " (p "value") ")")
+
+(ifc "if(" (p "condition" cond) ")" n> q n "endif(" (s cond) ")" >)
+(ife "if(" (p "condition" cond) ")" n> p n "else()" > n> q n
+        "endif(" (s cond) ")" >)
