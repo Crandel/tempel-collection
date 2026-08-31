@@ -16,3 +16,8 @@ hy-mode
 (stvr "(setv " q ")")
 (unl "(unless " (p "condition") n> q ")" >)
 (whn "(when " (p "condition") n> q ")" >)
+
+(cnd "(cond" n> "[" (p "condition") " " (p "result") "]" n>
+      "[" (p "condition") " " (p "result") "]" n> "[True " q "])" >)
+(cls "(defclass " (p "ClassName") " [" (p "BaseClass") "]" n>
+      "(defn --init-- [" (p "arg") "]" n> q "))" >)
