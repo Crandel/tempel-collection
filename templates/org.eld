@@ -37,3 +37,8 @@ org-mode
 (drwr & ":" p ":" n r ":end:")
 (inlsrc "src_" p "{" q "}")
 
+(ipy "#+begin_src ipython :session " (p "session01") " :file "
+         (p (concat (make-temp-name "./ipython-") ".png"))
+         " :exports " (p "both") n q n "#+end_src")
+
+(inlsrchdr "src_" (p "lang") "[" (p "where") "]{" q "}")
