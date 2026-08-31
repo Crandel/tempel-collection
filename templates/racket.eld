@@ -16,3 +16,9 @@ racket-mode
 (synrule "(syntax-rules (" (p "literal-id") p ")" n>
               "[(" (p "id") " " (p "pattern") ") " (p "template") "]" p
               ")" >)
+
+(whn "(when (" (p "predicate") ") " q ")")
+(unl "(unless (" (p "predicate") ") " q ")")
+(lmd "(lambda (" (p "arguments") ") " q ")")
+(ifc "(if (" (p "predicate") ")" n> q ")" >)
+(dfn "(define (" (p "name") " " (p "arguments") ") " q ")")
