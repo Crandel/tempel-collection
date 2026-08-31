@@ -87,4 +87,4 @@ python-base-mode
 (utf-8_encoding "# -*- coding: utf-8 -*-")
 (while "while " p ":" n> q)
 (with "with " p p ":" n> q)
-(with_statement "from __future__ import with_statement"))
+(with_statement "from __future__ import with_statement")
