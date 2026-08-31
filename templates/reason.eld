@@ -14,3 +14,6 @@ reason-mode
 (swch "switch (" (p "to_match") ") {" n
         "| " (p "matching") " => " q n "}")
 (wh "while (" (p "cond") ") {" n> q n "};" >)
+
+(ifc "if (" (p "cond") ") {" n> q n "}" >)
+(ife "if (" (p "cond") ") {" n> p n "} else {" > n> q n "}" >)
