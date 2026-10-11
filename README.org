@@ -40,3 +40,18 @@ Now all the templates will load automatically.
 * Usage
 
 Just call =tempel-expand= or =tempel-insert= in one of the supported modes.
+
+* Legacy trigger names
+
+Some Tempel Collection triggers have been renamed.  To use their earlier names,
+load the optional =tempel-collection-legacy= library in your Emacs configuration:
+
+#+begin_src emacs-lisp
+  (progn
+    (require 'tempel-collection-legacy)
+    (tempel-collection-enable-legacy-triggers))
+#+end_src
+
+The library adds aliases that use the collection's template expansions.  If a
+name has been assigned to another template, the earlier expansion takes
+precedence.  Template sources placed before the collection keep their priority.
