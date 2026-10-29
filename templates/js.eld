@@ -1,23 +1,23 @@
 js-base-mode typescript-ts-base-mode
 
-(if "if (" p ") {" n> q n "}" >)
-(el "if (" p ") {" n> p n "} else { " > n> q n "}" >)
-(elif "else if (" p ") {" n> q n "}" >)
-(else "else {" n> q n "}" >)
-(cop "( " p ") ? " p " : " q";")
+(ifc "if (" p ") {" n> q n "}" >)
+(ife "if (" p ") {" n> p n "} else { " > n> q n "}" >)
+(elsifc "else if (" p ") {" n> q n "}" >)
+(els "else {" n> q n "}" >)
+(ifcexpr "( " p ") ? " p " : " q";")
 
-(switch "switch (" p ") {" n> "case " p ":" n> p n> "default:" n> q n "}" >)
-(case "case " p ":" n> q)
+(swch "switch (" p ") {" n> "case " p ":" n> p n> "default:" n> q n "}" >)
+(arm "case " p ":" n> q)
 
-(while "while (" p ") {" n> q n "}" >)
-(dowhile "do {" n> p n> "} while (" q ");")
+(wh "while (" p ") {" n> q n "}" >)
+(whdo "do {" n> p n> "} while (" q ");")
 
-(for "for (" p "; " p "; " p ") {" n> q n "}" >)
-(fin "for (" p " in " p ") {" n> q n "}" >)
-(fof "for (" p " of " p ") {" n> q n "}" >)
+(fr "for (" p "; " p "; " p ") {" n> q n "}" >)
+(frin "for (" p " in " p ") {" n> q n "}" >)
+(frof "for (" p " of " p ") {" n> q n "}" >)
 
-(func "function " p "(" p ") {" n> q n "}" >)
-(fexp "let " p " = function(" p ") {" n> q n "};" >)
+(fn "function " p "(" p ") {" n> q n "}" >)
+(fnexpr "let " p " = function(" p ") {" n> q n "};" >)
 
 (imp "import {" p "} from \"" q "\";")
 (impas "import {" p " as " p "} from \"" q "\";")

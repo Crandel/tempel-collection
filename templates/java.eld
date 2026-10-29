@@ -3,13 +3,13 @@ java-mode
 (pkg "package " q ";")
 (imp "import " q ";")
 
-(pl "System.out.println(\"" q "\");")
+(prnln "System.out.println(\"" q "\");")
 
-(class "public class " p " {" n> q n "}")
-(main "public static void main(String[] args) {" n> q n> "}")
+(cls "public class " p " {" n> q n "}")
+(mn "public static void main(String[] args) {" n> q n> "}")
 
-(if "if (" p ") {" n> q n> "}")
-(elif "else if (" p ") {" n> q n> "}")
-(else "else {" n> q n> "}")
+(ifc "if (" p ") {" n> q n> "}")
+(elsifc "else if (" p ") {" n> q n> "}")
+(els "else {" n> q n> "}")
 
-(for "for (" p ") {" n> q n> "}")
+(fr "for (" p ") {" n> q n> "}")

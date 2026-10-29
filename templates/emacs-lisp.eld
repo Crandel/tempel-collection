@@ -3,36 +3,36 @@ emacs-lisp-mode
 (atload & ";;;###autoload")
 (pt "(point)")
 (vr "(defvar " p "\n  \"" p "\")")
-(lcl "(defvar-local " p "\n  \"" p "\")")
+(vrlcl "(defvar-local " p "\n  \"" p "\")")
 (cnst "(defconst " p "\n  \"" p "\")")
-(cstom "(defcustom " p "\n  \"" p "\"" n> ":type '" p ")")
+(cstm "(defcustom " p "\n  \"" p "\"" n> ":type '" p ")")
 (fce "(defface " p " '((t :inherit " p "))\n  \"" p "\")")
 (grp "(defgroup " p " nil\n  \"" p "\"" n> ":group '" p n> ":prefix \"" p "-\")")
 (mcr "(defmacro " p " (" p ")\n  \"" p "\"" n> r> ")")
 (als "(defalias '" p " '" p ")")
 (fn "(defun " p " (" p ")\n  \"" p "\"" n> r> ")")
-(iflet "(if-let (" p ")" n> r> ")")
+(ifclt "(if-let (" p ")" n> r> ")")
 (whnlt "(when-let (" p ")" n> r> ")")
-(iflt* "(if-let* (" p ")" n> r> ")")
-(whnlt* "(when-let* (" p ")" n> r> ")")
-(andlt* "(and-let* (" p ")" n> r> ")")
+(ifcltstar "(if-let* (" p ")" n> r> ")")
+(whnltstar "(when-let* (" p ")" n> r> ")")
+(andltstar "(and-let* (" p ")" n> r> ")")
 (cnd "(cond" n "(" q "))" >)
-(pcase "(pcase " (p "scrutinee") n "(" q "))" >)
+(mtch "(pcase " (p "scrutinee") n "(" q "))" >)
 (lmd "(lambda (" p ")" n> r> ")")
 (lt "(let (" p ")" n> r> ")")
-(lt* "(let* (" p ")" n> r> ")")
-(rc "(letrec (" p ")" n> r> ")")
-(dtimes "(dotimes (" p ")" n> r> ")")
-(dlist "(dolist (" p ")" n> r> ")")
-(lp "(cl-loop for " p " in " p " do" n> r> ")")
-(cmmnd "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive" p ")" n> r> ")")
-(advce "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
+(ltstar "(let* (" p ")" n> r> ")")
+(ltrec "(letrec (" p ")" n> r> ")")
+(frtimes "(dotimes (" p ")" n> r> ")")
+(frlst "(dolist (" p ")" n> r> ")")
+(fr "(cl-loop for " p " in " p " do" n> r> ")")
+(fnintr "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive" p ")" n> r> ")")
+(advc "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
         "(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
-(prvide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
+(prov "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name))) " ends here" n)
 (lg "(message \"LOG %s " (s sexp) ": %S"
      "\" (format-time-string \"%X\") " sexp ")")
-(package-header ";;; " (p (file-name-base (or (buffer-file-name) (buffer-name))) file) ".el --- " (p "summary" summary) " -*- lexical-binding: t -*-" n n
+(pkghdr ";;; " (p (file-name-base (or (buffer-file-name) (buffer-name))) file) ".el --- " (p "summary" summary) " -*- lexical-binding: t -*-" n n
 
                 ";; Author: " (p (user-full-name)) n
                 ";; Version: " (p "version") n
